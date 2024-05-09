@@ -8,19 +8,14 @@
 .container {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* flex-basis: calc(6.25% - 10px) */
 }
 
-/* .container > * {
-    margin: 10px;
-} */
+.btn {
+    width: 500px;
+}
 
 .row {
     display: flex;
-    /* margin: 0px; */
-    /* flex-wrap: wrap; */
-    /* flex-basis: calc(6.25% - 10px) */
 }
 .row > * {
     margin: 0px;
