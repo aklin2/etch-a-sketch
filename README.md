@@ -1,3 +1,4 @@
-This is a pretty shitty etch a sketch.
+This is a etch a sketch made in about an hour.
 Made in pure HTML, CSS, and Javascript.
-https://www.theodinproject.com/lessons/foundations-etch-a-sketch
+Feel free to play around with it:
+https://aklin2.github.io/etch-a-sketch/
