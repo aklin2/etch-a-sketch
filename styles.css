@@ -10,10 +10,6 @@
     flex-direction: column;
 }
 
-.btn {
-    width: 500px;
-}
-
 .row {
     display: flex;
 }

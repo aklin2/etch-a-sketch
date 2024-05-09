@@ -35,6 +35,7 @@ for (let square of allSquares) {
 const btn = document.createElement("button");
 btn.className = "btn";
 btn.innerHTML = "reset";
+btn.style.width = "500px";
 btn.addEventListener("click", () => {
   allSquares.forEach((square) => {
     square.style.backgroundColor = "grey";
