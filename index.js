@@ -19,16 +19,21 @@ for (let i = 0; i < n; i++) {
   container.appendChild(row);
 }
 
+function changeColor(event){
+  if (this.style.backgroundColor === "brown") {
+    this.style.backgroundColor = "grey";
+  } else {
+    this.style["background-color"] = "brown";
+  }
+}
+
 // Add an event listener that listens onclick of each square
 const allSquares = Array.from(document.querySelectorAll(".square"));
 for (let square of allSquares) {
-  square.addEventListener("mouseover", function (e) {
-    if (this.style.backgroundColor === "brown") {
-      this.style.backgroundColor = "grey";
-    } else {
-      this.style["background-color"] = "brown";
-    }
-  });
+  square.addEventListener("mouseover", changeColor);
+  square.addEventListener("touchstart", changeColor);
+  square.addEventListener("touchmove", changeColor);
+  square.addEventListener("touchend", changeColor);
 }
 
 // Reset button
