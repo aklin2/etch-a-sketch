@@ -20,11 +20,20 @@ for (let i = 0; i < n; i++) {
 }
 
 function changeColor(event){
-  if (this.style.backgroundColor === "brown") {
-    this.style.backgroundColor = "grey";
-  } else {
-    this.style["background-color"] = "brown";
+  let target = this;
+  // If this is a mobile device and we are doing touch events
+  if (event.type == "touchmove" || event.type == "touchstart" || event.type == "touchend"){
+    let target = document.elementFromPoint(
+      event.changedTouches[0].clientX, 
+      event.changedTouches[0].clientY
+    );
   }
+  if (target.style.backgroundColor === "brown") {
+    target.style.backgroundColor = "grey";
+  } else {
+    target.style["background-color"] = "brown";
+  }
+  
 }
 
 // Add an event listener that listens onclick of each square
