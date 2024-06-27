@@ -22,8 +22,8 @@ for (let i = 0; i < n; i++) {
 function changeColor(event){
   let target = this;
   // If this is a mobile device and we are doing touch events
-  if (event.type == "touchmove"){
-    let target = document.elementFromPoint(
+  if (event.type == "touchmove" || event.type == "touchstart" || event.type == "touchend"){
+    target = document.elementFromPoint(
       event.changedTouches[0].clientX, 
       event.changedTouches[0].clientY
     );
@@ -33,10 +33,9 @@ function changeColor(event){
   } else {
     target.style["background-color"] = "brown";
   }
-  
 }
 
-// Add an event listener that listens onclick of each square
+// Add an event listener that listens to each square
 const allSquares = Array.from(document.querySelectorAll(".square"));
 for (let square of allSquares) {
   square.addEventListener("mouseover", changeColor);
