@@ -22,7 +22,7 @@ for (let i = 0; i < n; i++) {
 function changeColor(event){
   let target = this;
   // If this is a mobile device and we are doing touch events
-  if (event.type == "touchmove" || event.type == "touchstart" || event.type == "touchend"){
+  if (event.type == "touchmove"){
     let target = document.elementFromPoint(
       event.changedTouches[0].clientX, 
       event.changedTouches[0].clientY
